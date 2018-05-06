@@ -154,9 +154,9 @@ _createInitialDOMChildren(props) {
       const childComponent = instantiateComponent(child)
       childComponent._mountIndex = i
       // component => DOM node
-      const childNode = Reconciler.mountComponent(child)
+      const childNode = Reconciler.mountComponent(childComponent)
 
-      DOM.appendChildren(this._domNode, childrenNodes)
+      DOM.appendChildren(this._domNode, childNode)
     })
   }
 }
